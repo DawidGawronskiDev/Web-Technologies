@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+  </head>
+  <style>
+    :root {
+      --mw: 900px;
+      --main: #b17457;
+      --black: #4a4947;
+      --white: #faf7f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      /* outline: 1px solid rgba(255, 0, 0, 0.5); */
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-family: "Inter", serif;
+    }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+      margin: 0;
+    }
+
+    h1 {
+      color: var(--main);
+      font-weight: bold;
+      font-size: 64px;
+      text-transform: uppercase;
+      font-family: "Satisfy", serif;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 32px;
+      text-transform: uppercase;
+      line-height: 1;
+      font-family: "Satisfy", serif;
+    }
+
+    h3 {
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-family: "Satisfy", serif;
+    }
+
+    p {
+      max-width: 70ch;
+    }
+
+    section {
+      width: 100%;
+      padding: 2rem;
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mw-container {
+      width: 100%;
+      max-width: var(--mw);
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      color: var(--main);
+      font-weight: bold;
+      font-family: "Satisfy", serif;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+
+      background-color: #ffffff;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-container nav {
+      font-size: 0.875rem;
+    }
+
+    .header-container nav ul {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .header-container:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      place-items: center;
+      justify-content: start;
+      text-align: center;
+    }
+
+    #hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-sub {
+      opacity: 50%;
+    }
+
+    #story {
+      background-color: var(--main);
+      color: var(--white);
+    }
+
+    #story .mw-container {
+      align-items: flex-start;
+    }
+
+    .cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: 8px;
+      text-align: center;
+
+      height: min-content;
+
+      position: relative;
+    }
+
+    .card .content {
+      width: 90%;
+      color: var(--white);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      position: absolute;
+      opacity: 0;
+
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .card:hover {
+      transition: 0.2s;
+    }
+
+    .card:hover img {
+      filter: brightness(50%);
+    }
+
+    .card:hover .content {
+      opacity: 1;
+      padding: 0 0.25rem;
+      transform: translate(-50%, -50%);
+      transition: 0.2s;
+    }
+
+    #menu {
+      width: 100%;
+    }
+
+    #menu img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    #visit {
+      text-align: right;
+      align-items: flex-end;
+    }
+
+    #visit .mw-container {
+      align-items: flex-end;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="header-container">
+        <div><span class="logo">Sweet Delights</span></div>
+        <div>
+          <nav>
+            <ul>
+              <li><a href="#story">Our Story</a></li>
+              <li><a href="#menu">Our Menu</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div><span>Contact Us</span></div>
+      </div>
+    </header>
+    <section id="hero">
+      <div class="mw-container">
+        <h1>Welcome to Sweet Delights Bakery</h1>
+        <p class="hero-sub">
+          Freshly Baked, Every Day At Sweet Delights Bakery, we believe in the
+          magic of freshly baked goods. From warm, buttery croissants to
+          indulgent chocolate cakes, our passion is to create treats that bring
+          joy to every bite.
+        </p>
+      </div>
+    </section>
+    <section id="story">
+      <div class="mw-container">
+        <h2>Our story</h2>
+        <p>
+          Founded with love and a passion for baking, Sweet Delights Bakery has
+          been serving the community with handcrafted pastries, cakes, and
+          artisan bread. Every recipe is crafted with the finest ingredients to
+          ensure quality and taste that keeps our customers coming back.
+        </p>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="mw-container">
+        <h2>Our Menu</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="./images/bread.jpg" alt="bread" />
+            <div class="content">
+              <h3>Bread & Pastries</h3>
+              <p>
+                Sourdough, French baguettes, croissants, danishes, and more.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/cake.jpg" alt="cake" />
+            <div class="content">
+              <h3>Cakes & Desserts</h3>
+              <p>
+                Classic cheesecakes, chocolate mousse, fruit tarts, and
+                customized celebration cakes.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/cookies.jpg" alt="cookies" />
+            <div class="content">
+              <h3>Cookies & Cupcakes</h3>
+              <p>
+                A variety of flavors, from traditional chocolate chip to gourmet
+                selections.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./images/special.jpg" alt="special" />
+            <div class="content">
+              <h3>Specialty Items</h3>
+              <p>
+                Seasonal treats, gluten-free options, and vegan-friendly bakes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="mw-container">
+        <h2>Custom Orders & Catering</h2>
+        <p>
+          Looking for a special cake for your celebration? Need a catering
+          option for your event? We offer customized cakes and baked goods
+          tailored to your needs. Contact us to discuss your vision, and we’ll
+          bring it to life with our expertise.
+        </p>
+      </div>
+    </section>
+    <section id="visit">
+      <div class="mw-container">
+        <h2>Visit Us</h2>
+        <p>
+          Come and experience the aroma of freshly baked goods at our bakery.
+          Whether you're stopping by for a morning pastry, an afternoon coffee,
+          or a special treat for a loved one, we guarantee a warm welcome.
+        </p>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>
