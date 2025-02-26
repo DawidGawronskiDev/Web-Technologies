@@ -1,0 +1,181 @@
+@import url("https://fonts.cdnfonts.com/css/harry-potter");
+
+:root {
+  --c-white: #ffffff;
+  --c-black: #000000;
+
+  --s-lg: 954px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+  font-family: "Harry Potter", sans-serif;
+  /* outline: 1px solid rgba(255, 0, 0, 0.5); */
+
+  color: var(--c-black);
+}
+
+.dark * {
+  color: var(--c-white);
+}
+
+.dark {
+  background-color: var(--c-black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--c-white);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+nav {
+  padding: 1rem 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav ul li {
+  font-size: 0.825rem;
+  list-style: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+
+  padding: 1rem 0;
+
+  z-index: 999;
+
+  border-bottom: 1px solid hsla(0deg, 50%, 100%, 0.3);
+  background-color: var(--c-white);
+}
+
+.header-flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark header {
+  background-color: var(--c-black);
+}
+
+.mx-container {
+  padding: 0 2rem;
+  max-width: var(--s-lg);
+  margin: 0 auto;
+}
+
+.banner {
+  width: 100%;
+  height: calc(80vh - (var(--s-lg) / 4));
+  background-image: url("./images/banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.banner-heading {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.banner-heading h1 {
+  display: inline !important;
+  font-size: 4rem;
+}
+
+.about {
+  text-align: center;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+.main-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(428px, 1fr));
+  gap: 2rem;
+}
+
+.main-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 954px) {
+  .main-grid > *:nth-child(3) {
+    grid-column: 2 / 3;
+  }
+
+  .main-grid > *:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .main-grid > *:nth-child(2n) {
+    text-align: left;
+  }
+}
+
+.testimonials {
+  text-align: center;
+}
+
+.testimonials-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1rem;
+}
+
+.testimonial {
+  background-image: linear-gradient(
+    hsla(0deg, 50%, 100%, 0.05),
+    hsla(0deg, 50%, 100%, 0.1)
+  );
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  border: 1px solid hsla(0deg, 50%, 100%, 0.1);
+  box-shadow: 0px 2px 4px 0px hsla(0deg, 50%, 100%, 0.1);
+}
+
+.testimonial img {
+  aspect-ratio: 1 / 1;
+  width: 3rem;
+  border-radius: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}

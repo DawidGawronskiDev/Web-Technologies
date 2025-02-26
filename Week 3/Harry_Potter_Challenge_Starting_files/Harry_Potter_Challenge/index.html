@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Harry Potter Landing Page Mine</title>
+  </head>
+
+  <body class="one two">
+    <header>
+      <div class="mx-container header-flex">
+        <nav>
+          <ul>
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+        </nav>
+        <button id="mode">Mode</button>
+      </div>
+    </header>
+    <section id="banner" class="banner">
+      <div class="banner-heading mx-container">
+        <h1 style="color: white">Welcome to Hogwards</h1>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2 id="why-heading">Why Study with us?</h2>
+      <div class="mx-container">
+        <div class="main-grid">
+          <img src="./images/horntail.jpg" alt="" />
+          <div>
+            <h3>Danger!</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
+              architecto! Reiciendis culpa cum itaque id repudiandae eligendi,
+              animi adipisci tempore quasi veritatis reprehenderit at distinctio
+              porro voluptatibus, recusandae amet labore!
+            </p>
+          </div>
+          <img src="./images/willow.jpg" alt="Willow" />
+
+          <div>
+            <h3>Nature!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+              velit sint, praesentium pariatur inventore nobis ipsam nihil nulla
+              quam quis vel quidem? Est ullam repellendus perspiciatis nihil
+              inventore accusantium blanditiis.
+            </p>
+          </div>
+          <img src="./images/fight.jpg" alt="Fight" />
+          <div>
+            <h3>The Chosen One Package!</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem facere voluptates fugit porro numquam esse quam,
+              amet distinctio illum iste dicta culpa repellat, libero aliquam?
+              Non aperiam totam vitae architecto?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="mx-container testimonials-grid">
+        <div class="testimonial">
+          <img src="./images/testimonial1.png" alt="Person Image" />
+          <blockquote>
+            "Hogwarts will always be there to welcome you home."
+          </blockquote>
+          <p class="author">- Albus Dumbledore</p>
+        </div>
+
+        <div class="testimonial">
+          <img src="./images/testimonial2.png" alt="Person Image" />
+          <blockquote>"I solemnly swear that I am up to no good."</blockquote>
+          <p class="author">- Harry Potter</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="mx-container">
+        <p>Harry Potter 2025</p>
+      </div>
+    </footer>
+    <script>
+      const btn = document.querySelector("#mode");
+      const handleClick = (e) => {
+        const body = document.querySelector("body");
+        body.classList[body.classList.contains("dark") ? "remove" : "add"](
+          "dark"
+        );
+      };
+      btn.addEventListener("click", handleClick);
+    </script>
+  </body>
+</html>
